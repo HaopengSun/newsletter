@@ -1,0 +1,25 @@
+@import "../../styles/mixin.scss";
+@import "../../styles/variables.scss";
+
+.subscribe-form {
+  background-color: $light-background;
+  border-radius: 2rem;
+  color: $white;
+  font-size: 2.5rem;
+  height: 4rem;
+  margin-bottom: 1.5rem;
+  width: 60%;
+  text-align: center;
+
+  ::-webkit-input-placeholder{
+    text-align: center;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus::placeholder {
+    color: transparent;
+  }
+}
