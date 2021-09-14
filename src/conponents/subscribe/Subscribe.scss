@@ -2,23 +2,21 @@
 @import "../../styles/variables.scss";
 
 .subscribe{
-  &__card {
-    min-height: $appointment-height;
-    margin-left: 3rem;
-    border-radius: 0.5rem;
-    padding: 1.2rem 1.5rem;
-    display: flex;
-    justify-content: space-between;
-    flex-flow: row wrap;
-    color: $white;
+  // min-height: $appointment-height;
+  margin: 3rem;
+  padding: 1.2rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  color: $white;
 
-    &--create {
-      background-color: $dark-background;
-      display: flex;
-    }
+  .title{
+    font-size: 6rem;
+    margin: auto;
   }
 
-  &__form {
-    display: flex;
-  }
 }
+
+// .subscribe--popup{
+//   display: none;
+// }
