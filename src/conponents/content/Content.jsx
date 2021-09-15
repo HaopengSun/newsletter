@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Card from "../card/Card";
 import axios from 'axios';
-import arrow from './arrow.png'
+import arrow from '../../assets/arrow.png'
 import "./Content.scss";
 
 export default function Content() {
