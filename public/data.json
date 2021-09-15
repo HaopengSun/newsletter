@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "title": "Consulting Services",
+    "content": "The Enterprise Advisory Services (EAS) unit provides assessments, accelerators, and workshops to assist you in meeting your customers’ ever-changing needs. We also help you co-create new business models using automation and AI. We set your business, your IT, and your people on the path to success."
+  },
+  {
+    "id": 2,
+    "title": "SIA Custom Services",
+    "content": "We architect and build cloud-native applications, and we customize them to meet your needs. We also perform tests, fix problems, and provide updates and new features. The Innovation Lab (LAB) keeps itself up to date with the latest technologies, and it constantly further its knowledge with R&D initiatives."
+  },
+  {
+    "id": 3,
+    "title": "Deployment & Support",
+    "content": "Our end-to-end co-managed services are designed to successfully deploy IT solutions. We also protect your enterprise and help you limit the impact of business disruptions. The Multi-Cloud Command Center (M3C) is the trusted partner that can reduce your IT operational costs and improve your customer service levels."
+  },
+  {
+    "id": 4,
+    "title": "Products & Solutions",
+    "content": "The NextBlue Marketplace (NBM) regroups a variety of IT products, and business & industry solutions from our network of partners. With skills and experience in data & AI, automation, security, marketing, and more, the NextBlue Alliance brings to the market a breadth of solutions, propelled by a depth of expertise in each area."
+  }
+]

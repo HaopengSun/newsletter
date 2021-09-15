@@ -1,11 +1,17 @@
-import React, { useRef } from "react";
+import React, { useEffect, useState } from "react";
 import Card from "../card/Card";
+import axios from 'axios';
 
 import "./Content.scss";
 
 export default function Content() {
-  const textRef = useRef();
-  const services = ['Consulting Services', 'SIA Custom Services', 'Deployment & Support', 'Products & Solutions']
+  const [services, setServices] = useState([])
+
+  useEffect(() => {
+    axios.get('./data.json').then(response => {
+      setServices(response.data)
+    })
+  }, [])
 
   return (
     <div className="content">
@@ -18,7 +24,7 @@ export default function Content() {
         <br/>
       </div>
       <div className="down">
-        {services.map((service, idx) => <Card key={idx} service={service} />)}
+        {services.map((service, idx) => <Card key={idx} title={service.title} content={service.content}/>)}
       </div>
     </div>
   )

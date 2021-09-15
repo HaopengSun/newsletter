@@ -2,6 +2,8 @@
 @import "../../styles/variables.scss";
 
 .card{
-  width: 30%;
-  margin: 0 10px;
+  .title{
+    width: 30%;
+    margin: 0 10px;
+  }
 }
