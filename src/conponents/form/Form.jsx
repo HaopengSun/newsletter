@@ -14,8 +14,8 @@ export default function Form(props) {
     console.log('validation')
   }
 
-  return ( props.popup ?
-    (<section className="subscribe">
+  return <section className="subscribe" style={props.style}>
+      <Button className="back" close onClick={props.handleChat}>back</Button>
       <h1 className="title">Subscribe Now!</h1>
       <form autoComplete="off" className="subscribe_form" onSubmit={event => {
         event.preventDefault();
@@ -27,10 +27,12 @@ export default function Form(props) {
           <Input placeholder="Email"/>
         </div>
         <div>
-          <Button confirm onClick={confirm}>Confirm</Button>
+          <Button confirm onClick={() => {
+            confirm()
+            props.handleChat()
+          }}>Confirm</Button>
           <Button danger onClick={confirm}>Clear</Button>
-          <Button close onClick={props.popupForm}>back</Button>
         </div>
       </form>
-    </section>) : '')
+    </section>
 }

@@ -1,19 +1,9 @@
-import React, {useRef, useEffect} from "react";
-import { init } from "ityped"
+import React, { useRef } from "react";
 
 import "./Content.scss";
 
 export default function Content() {
   const textRef = useRef();
-
-  useEffect(() => {
-    init(textRef.current, {
-      showCursor: false,
-      backDelay: 1500,
-      backSpeed: 60,
-      strings: ["Consulting Services", "SIA Custom Services", "Deployment & Support", "Products & Solutions"]
-    })
-  })
 
   return (
     <div className="content">

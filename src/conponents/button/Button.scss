@@ -37,8 +37,8 @@
 }
 
 .button--close {
-  color: $white;
-  border-color: $confirm-color;
+  color: red;
+  border-color: red;
   background-color: transparent;
 }
 
@@ -54,7 +54,7 @@
 
 .button--close:hover {
   color: $white;
-  background-color: $confirm-color;
+  background-color: red;
 }
 
 .button:last-of-type {

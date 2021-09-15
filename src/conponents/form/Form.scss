@@ -1,20 +1,32 @@
 @import "../../styles/mixin.scss";
 @import "../../styles/variables.scss";
 
+@keyframes slide-up{
+  0%{
+    transform: translate(-50%, 30%);
+  }
+  100%{
+    transform: (-50%, -50%);
+  }
+}
+
 .subscribe{
-  // min-height: $appointment-height;
   margin: 3rem;
   padding: 1.2rem 1.5rem;
   display: flex;
   justify-content: space-between;
   flex-flow: row wrap;
-  color: $white;
+  color: $dark-background;
   border: 5px solid white;
   border-radius: 5rem;
 
   .title{
     font-size: 6rem;
     margin: auto;
+  }
+
+  .back{
+    float: right;
   }
 
 }
