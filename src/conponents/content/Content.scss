@@ -2,7 +2,6 @@
 @import "../../styles/variables.scss";
 
 .content{
-  width: 90%;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -19,33 +18,34 @@
   }
 
   .down{
+    height: 350px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     position: relative;
 
-    .service {
-      display: flex;
-      left: 0;
-      transition: all 1s ease-out;
+    .arrow {
+      height: 50px;
+      position: absolute;
+      cursor: pointer;
+  
+      &.left {
+        left: 100px;
+      }
+      
+      &.right {
+        transform: rotateY(180deg);
+        right: 100px;
       }
     }
 
-    .arrows{
+    .service {
+      height: 300px;
       display: flex;
       justify-content: space-between;
-      .arrow {
-        height: 50px;
-        cursor: pointer;
-    
-        &.left {
-          left: 100px;
-        }
-        
-        &.right {
-          transform: rotateY(180deg);
-          right: 100px;
-        }
+      position: absolute;
+      left: 0;
+      transition: all 1s ease-out;
       }
     }
 }

@@ -14,10 +14,11 @@ export default function Content() {
     })
   }, [])
 
-  const nextSlide = function(next){
-    next === "left" ? setCurrentSlide(currentSlide > 0 ? currentSlide - 1 : 3)
-    : setCurrentSlide(currentSlide < 3 ? currentSlide + 1 : 0)
-  }
+  const nextSlide = (way) => {
+    way === "left"
+      ? setCurrentSlide(currentSlide > 0 ? currentSlide - 1 : 3)
+      : setCurrentSlide(currentSlide < services.length - 1 ? currentSlide + 1 : 0);
+  };
 
   return (
     <div className="content">
@@ -35,8 +36,6 @@ export default function Content() {
             <Card key={idx} title={service.title} content={service.content}/>
           )}
         </div>
-      </div>
-      <div className="arrows">
         <img src={arrow} className="arrow left" alt="arrow" onClick={() => nextSlide("left")}/>
         <img src={arrow} className="arrow right" alt="arrow" onClick={() => nextSlide()}/>
       </div>
