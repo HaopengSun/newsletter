@@ -5,7 +5,7 @@ import "./Nav.scss";
 export default function Nav() {
    return (
     <div className="topnav" id="myTopnav">
-      <a href="#home" style={{color: "#FFD700"}}>Home</a>
+      <a href="#home" id="home">Home</a>
       <a href="#news">News</a>
       <a href="#contact">Contact</a>
       <a href="#about">About</a>

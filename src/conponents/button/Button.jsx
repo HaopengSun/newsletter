@@ -11,7 +11,8 @@ export default function Button(props) {
       'button--close': props.close,
       'button--sub': props.sub,
    });
-   return <button 
+   return <button
+      type={props.type ? props.type : "text"}
       className={buttonClass}
       onClick={props.onClick}
       >{props.children}</button>;
