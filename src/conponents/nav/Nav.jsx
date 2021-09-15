@@ -2,7 +2,7 @@ import React from "react";
 
 import "./Nav.scss";
 
-export default function Button() {
+export default function Nav() {
    return (
     <div className="topnav" id="myTopnav">
       <a href="#home" style={{color: "#FFD700"}}>Home</a>

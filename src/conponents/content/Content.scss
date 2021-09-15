@@ -1,0 +1,55 @@
+@import "../../styles/mixin.scss";
+@import "../../styles/variables.scss";
+
+.content{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+
+  .left{
+    color: white;
+    font-size: 24px;
+  
+    .change{
+      background-color: $item;
+      color: $dark-background;
+    }
+
+  }
+
+  .right{
+    position: relative;
+
+    .wrapper{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      
+      h2{
+        font-size: 24px;
+        color: white;
+
+        span{
+          color: $item;
+        }
+
+        .ityped-cursor{
+          animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+          50%{
+            opacity: 1;
+          }
+          100%{
+            opacity: 0;
+          }
+        }
+      }
+    }
+  }
+
+}
