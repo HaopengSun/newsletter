@@ -1,22 +1,2 @@
 @import "../../styles/mixin.scss";
 @import "../../styles/variables.scss";
-
-.subscribe{
-  // min-height: $appointment-height;
-  margin: 3rem;
-  padding: 1.2rem 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  flex-flow: row wrap;
-  color: $white;
-
-  .title{
-    font-size: 6rem;
-    margin: auto;
-  }
-
-}
-
-// .subscribe--popup{
-//   display: none;
-// }
