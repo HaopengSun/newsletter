@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "../button/Button"
 import Input from "../input/Input"
 
@@ -6,8 +6,12 @@ import "./Form.scss"
 
 export default function Form(props) {
 
+  const [name, setName] = useState('')
+  const [company, setCompany] = useState('')
+  const [email, setEmail] = useState('')
+
   function confirm(){
-    console.log('confirm')
+    console.log(name, company, email)
   }
 
   function validation(){
@@ -22,9 +26,9 @@ export default function Form(props) {
         validation();
       }}>
         <div>
-          <Input placeholder="Name"/>
-          <Input placeholder="Company"/>
-          <Input placeholder="Email"/>
+          <Input setValue={setName} placeholder="Name"/>
+          <Input setValue={setCompany} placeholder="Company"/>
+          <Input setValue={setEmail} placeholder="Email"/>
         </div>
         <div>
           <Button confirm onClick={() => {

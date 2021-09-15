@@ -42,6 +42,12 @@
   background-color: transparent;
 }
 
+.button--sub {
+  color: $item;
+  border-color:$item;
+  background-color: transparent;
+}
+
 .button--danger:hover {
   color: $white;
   background-color: $danger-color;
@@ -55,6 +61,11 @@
 .button--close:hover {
   color: $white;
   background-color: red;
+}
+
+.button--sub:hover {
+  color: $white;
+  background-color: $item;
 }
 
 .button:last-of-type {

@@ -58,8 +58,8 @@ export default function Subscribe() {
       <Nav />
       <Content />
       <span className="newsletter">
-        <p>Subscribe Newletter!</p>
-        <Button confirm onClick={handleChat}>Subscribe</Button>
+        <p>Subscribe Newsletter and get latest news!</p>
+        <Button sub onClick={handleChat}>Subscribe</Button>
       </span>
       <Form style={style} handleChat={handleChat}/>
     </div>

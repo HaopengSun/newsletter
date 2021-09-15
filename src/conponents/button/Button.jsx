@@ -8,7 +8,8 @@ export default function Button(props) {
    let buttonClass = classNames('button', {
       'button--confirm': props.confirm,
       'button--danger': props.danger,
-      'button--close': props.close
+      'button--close': props.close,
+      'button--sub': props.sub,
    });
    return <button 
       className={buttonClass}
