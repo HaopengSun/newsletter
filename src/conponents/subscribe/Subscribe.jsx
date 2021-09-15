@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Button from "../button/Button"
 import Form from "../form/Form"
+import Nav from "../nav/Nav"
 
 import "./Subscribe.scss"
 
@@ -14,6 +15,7 @@ export default function Subscribe() {
 
   return (
     <div>
+      <Nav />
       <Button confirm onClick={popupForm}>Subscribe</Button>
       <Form popup={popup} popupForm={popupForm}/>
     </div>
