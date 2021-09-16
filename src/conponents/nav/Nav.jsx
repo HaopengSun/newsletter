@@ -2,16 +2,20 @@ import React from "react";
 
 import "./Nav.scss";
 
-export default function Nav() {
+export default function Nav(props) {
    return (
-    <div className="topnav" id="myTopnav">
-      <a href="#home" id="home">Home</a>
-      <a href="#news">News</a>
-      <a href="#contact">Contact</a>
-      <a href="#about">About</a>
-      <a href="#classname" className="icon">
-        <i className="fa fa-bars"></i>
-      </a>
+    <div className={"topnav " + (props.menuOpen && "active")}>
+      <div className="left">
+        <a href="#home" id="home">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+      </div>
+      <div className="right" onClick={() => props.setMenuOpen(!props.menuOpen)}>
+        <span className="line1"></span>
+        <span className="line2"></span>
+        <span className="line3"></span>
+      </div>
     </div>
    )
 }

@@ -14,6 +14,7 @@ export default function Subscribe() {
   const [style, setStyle] = useState({
     display: 'none'
   })
+  const [menuOpen, setMenuOpen] = useState(false)
 
   const isMobile = window.innerWidth <= 500;
 
@@ -37,35 +38,29 @@ export default function Subscribe() {
 
   const handleChat = () => {
     if (style.display === "none") {
-      const newStyle = {
+      const fixedStyle = {
+        width: width,
         display: "flex",
         flexDirection: "column",
         border: "3px solid black",
         borderRadius: "15px",
         position: "fixed",
-        width: width,
-        height: "90%",
         top: "40%",
-        left: "46%",
-        transform: "translate(-50%, -50%)",
         background: "white",
+        animation: "slide-up 1s",
         zIndex: "1",
-        animation: "slide-up 1s"
+      }
+      const newStyle = {
+        ...fixedStyle,
+        height: "90%",
+        left: "46%",
+        transform: "translate(-50%, -50%)"
       }
       const styleMobile = {
-        display: "flex",
-        flexDirection: "column",
-        border: "3px solid black",
-        borderRadius: "15px",
-        position: "fixed",
-        width: width,
+        ...fixedStyle,
         height: "30%",
-        top: "40%",
         left: "10%",
         transform: "translate(-50%, -130%)",
-        background: "white",
-        zIndex: "1",
-        animation: "slide-up 1s"
       }
       if (isMobile){
         setStyle(styleMobile)
@@ -83,7 +78,7 @@ export default function Subscribe() {
 
   return (
     <div>
-      <Nav />
+      <Nav menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
       <Content />
       <span className="newsletter">
         <p>Subscribe Newsletter and get latest news!</p>

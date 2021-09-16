@@ -41,8 +41,6 @@ export default function Form(props) {
     setEmail('')
     setSubscribe(false)
   }
-
-  console.log(error)
   
   return <section className="subscribe" style={props.style}>
       <div className="back" >
