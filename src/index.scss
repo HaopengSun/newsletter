@@ -7,6 +7,17 @@
 body {
   font-family: $font-family;
   background-color: $dark-background;
+  position: relative;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  scrollbar-width: none;
+
+  max-width: 100%;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar{
+    display: none;
+  }
 }
 
 .layout {
