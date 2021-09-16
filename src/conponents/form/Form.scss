@@ -22,16 +22,31 @@
 
   .title{
     font-size: 4rem;
+    margin-top: 100px;
+  }
+
+  .checkbox{
+    margin-bottom: 20px;
   }
 
   .back{
-    float: right;
+    position: absolute;
+    right: 20px;
   }
 
   .errorMeg{
     font-size: 20px;
     margin: 0 0 10px 0;
     color: $danger-color;
+  }
+
+  .buttons{
+    display: flex;
+    justify-content: space-around;
+    @include mobile{
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
 }

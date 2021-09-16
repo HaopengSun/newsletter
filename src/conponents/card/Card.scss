@@ -16,6 +16,12 @@
     align-items: center;
     justify-content: center;
 
+    @include mobile{
+      width: 80%;
+      height: 90%;
+      margin: 15px 0;
+    }
+
     .left {
       flex: 4;
       height: 80%;
@@ -33,9 +39,15 @@
             font-size: 32px;
             margin-bottom: 24px;
             font-weight: bold;
+            @include mobile{
+              font-size: 24px;
+            }
           }
           .content{
             font-size: 24px;
+            @include mobile{
+              font-size: 16px;
+            }
           }
         }
       }

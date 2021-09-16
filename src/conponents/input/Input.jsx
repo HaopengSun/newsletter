@@ -4,7 +4,7 @@ import "./Input.scss";
 export default function Input(props) {
   return (
       <input
-        type="text"
+        type={props.type ? props.type : "text"}
         className="subscribe-form"
         placeholder={props.placeholder}
         onChange={e => props.setValue(e.target.value)}

@@ -13,15 +13,16 @@ export default function Subscribe() {
     display: 'none'
   })
 
+  const isMobile = window.innerWidth <= 500;
+
   useEffect(() => { 
-
     updateDimensions();
-
     window.addEventListener("resize", updateDimensions);
-    return () => 
+    return () => {
       window.removeEventListener("resize",updateDimensions);
-   }, [])
-
+    };
+  }, [])
+  
   const updateDimensions = () => {
     const width = window.innerWidth > 1023 ? window.innerWidth * 0.5 : window.innerWidth * 0.8
     setWindowWidth(width)
@@ -36,15 +37,34 @@ export default function Subscribe() {
         borderRadius: "15px",
         position: "fixed",
         width: width,
-        height: "80%",
+        height: "90%",
         top: "40%",
-        left: "50%",
+        left: "46%",
         transform: "translate(-50%, -50%)",
         background: "white",
         zIndex: "1",
         animation: "slide-up 1s"
       }
-      setStyle(newStyle)
+      const styleMobile = {
+        display: "flex",
+        flexDirection: "column",
+        border: "3px solid black",
+        borderRadius: "15px",
+        position: "fixed",
+        width: width,
+        height: "30%",
+        top: "40%",
+        left: "10%",
+        transform: "translate(-50%, -130%)",
+        background: "white",
+        zIndex: "1",
+        animation: "slide-up 1s"
+      }
+      if (isMobile){
+        setStyle(styleMobile)
+      } else {
+        setStyle(newStyle)
+      }
     } else {
       const newStyle = {
         display: "none",
@@ -52,6 +72,7 @@ export default function Subscribe() {
       setStyle(newStyle)
     }
   }
+
 
   return (
     <div>

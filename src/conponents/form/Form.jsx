@@ -49,7 +49,9 @@ export default function Form(props) {
   console.log(error)
   
   return <section className="subscribe" style={props.style}>
-      <Button className="back" close onClick={props.handleChat}>back</Button>
+      <div className="back" >
+        <Button close onClick={props.handleChat}>back</Button>
+      </div>
       <h1 className="title">Subscribe Now!</h1>
       <form autoComplete="off" className="subscribe_form" onSubmit={event => {
         event.preventDefault();
@@ -63,9 +65,13 @@ export default function Form(props) {
           <Input setValue={setName} value={name} placeholder="Name"/>
           <Input setValue={setCompany} value={company} placeholder="Company"/>
           <Input setValue={setEmail} value={email} placeholder="Email"/>
+          <div className="checkbox">
+            <input type="checkbox" value="Bike" />
+            <label for="vehicle1">Would you like to receive emails from SIA innovations?</label><br></br>
+          </div>
         </div>
         <div className="error">{error && <p className="errorMeg">{errorMsg}</p>}</div>
-        <div>
+        <div className="buttons">
           <Button confirm type="submit">Confirm</Button>
           <Button danger onClick={reset}>Clear</Button>
         </div>

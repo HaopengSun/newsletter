@@ -36,8 +36,10 @@ export default function Content() {
             <Card key={idx} title={service.title} content={service.content}/>
           )}
         </div>
-        <img src={arrow} className="arrow left" alt="arrow" onClick={() => nextSlide("left")}/>
-        <img src={arrow} className="arrow right" alt="arrow" onClick={() => nextSlide()}/>
+        <div className="arrows">
+          <img src={arrow} className="arrow left" alt="arrow" onClick={() => nextSlide("left")}/>
+          <img src={arrow} className="arrow right" alt="arrow" onClick={() => nextSlide()}/>
+        </div>
       </div>
     </div>
   )

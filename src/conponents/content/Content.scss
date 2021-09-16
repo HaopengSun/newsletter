@@ -9,6 +9,10 @@
   .top{
     color: white;
     font-size: 24px;
+
+    @include mobile{
+      font-size: 16px;
+    }
   
     .change{
       background-color: $item;
@@ -24,10 +28,20 @@
     justify-content: space-between;
     position: relative;
 
+    @include mobile{
+      height: 30vh;
+      flex-direction: column;
+      justify-content: center;
+    }
+
     .arrow {
       height: 50px;
       position: absolute;
       cursor: pointer;
+
+      @include mobile{
+        display: none;
+      }
   
       &.left {
         left: 100px;

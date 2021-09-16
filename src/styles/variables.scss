@@ -18,3 +18,10 @@ $confirm-color: #10ac84;
 $item: #FFD700;
 
 $spacing: 2rem;
+
+$width: 768px;
+@mixin mobile{
+  @media (max-width: #{$width}) {
+    @content
+  }
+}
