@@ -6,7 +6,7 @@ export default function Nav(props) {
    return (
     <div className={"topnav " + (props.menuOpen && "active")}>
       <div className="left">
-        <a href="#home" id="home">Home</a>
+        <a href="#home" id="home">SIA Innovations</a>
         <a href="#news">News</a>
         <a href="#contact">Contact</a>
         <a href="#about">About</a>

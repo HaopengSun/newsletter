@@ -46,6 +46,7 @@ export default function Form(props) {
       <div className="back" >
         <Button close onClick={props.handleChat}>Later</Button>
       </div>
+      <h1 className="subtitle">SIA innovations</h1>
       <h1 className="title">Subscribe Now!</h1>
       <form autoComplete="off" className="subscribe_form" onSubmit={event => {
         event.preventDefault();
