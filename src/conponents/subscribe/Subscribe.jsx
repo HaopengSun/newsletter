@@ -23,6 +23,8 @@ export default function Subscribe() {
     };
   }, [])
   
+  setTimeout(() => { handleChat() }, 3000)
+  
   const updateDimensions = () => {
     const width = window.innerWidth > 1023 ? window.innerWidth * 0.5 : window.innerWidth * 0.8
     setWindowWidth(width)
