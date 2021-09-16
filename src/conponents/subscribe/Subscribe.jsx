@@ -8,7 +8,9 @@ import "./Subscribe.scss"
 
 export default function Subscribe() {
 
-  const [width, setWindowWidth] = useState(0);
+  const [width, setWindowWidth] = useState(
+    window.innerWidth > 1023 ? window.innerWidth * 0.5 : window.innerWidth * 0.8
+  );
   const [style, setStyle] = useState({
     display: 'none'
   })
@@ -23,7 +25,10 @@ export default function Subscribe() {
     };
   }, [])
   
-  setTimeout(() => { handleChat() }, 3000)
+  useEffect(() => {
+    const timer = setTimeout(() => { handleChat() }, 3000)
+    return () => clearTimeout(timer)
+  }, [])
   
   const updateDimensions = () => {
     const width = window.innerWidth > 1023 ? window.innerWidth * 0.5 : window.innerWidth * 0.8
