@@ -9,18 +9,13 @@ export default function Form(props) {
   const [name, setName] = useState('')
   const [company, setCompany] = useState('')
   const [email, setEmail] = useState('')
-
-  const [userInfo, setUserInfo] = useState({
-    name: "",
-    company: "",
-    email: ""
-  })
+  const [subscribe, setSubscribe] = useState(false)
 
   const [error, setError] = useState(false)
   const [errorMsg, setErrorMsg] = useState('')
 
   function confirm(){
-    console.log(name, company, email)
+    console.log(name, company, email, subscribe)
   }
 
   function validation(){
@@ -44,13 +39,14 @@ export default function Form(props) {
     setName('')
     setCompany('')
     setEmail('')
+    setSubscribe(false)
   }
 
   console.log(error)
   
   return <section className="subscribe" style={props.style}>
       <div className="back" >
-        <Button close onClick={props.handleChat}>back</Button>
+        <Button close onClick={props.handleChat}>Later</Button>
       </div>
       <h1 className="title">Subscribe Now!</h1>
       <form autoComplete="off" className="subscribe_form" onSubmit={event => {
@@ -66,7 +62,7 @@ export default function Form(props) {
           <Input setValue={setCompany} value={company} placeholder="Company"/>
           <Input setValue={setEmail} value={email} placeholder="Email"/>
           <div className="checkbox">
-            <input type="checkbox" value="Bike" />
+            <Input type="checkbox"  setValue={setSubscribe} value={subscribe} placeholder="Email"/>
             <label for="vehicle1">Would you like to receive emails from SIA innovations?</label><br></br>
           </div>
         </div>
