@@ -21,6 +21,7 @@ const useTimeout = (width) => {
   }
   
   const handleChat = () => {
+    console.log('show')
     if (style.display === "none") {
       const newStyle = {
         ...fixedStyle,
@@ -30,9 +31,9 @@ const useTimeout = (width) => {
       }
       const styleMobile = {
         ...fixedStyle,
-        height: "30%",
+        height: "70%",
         left: "10%",
-        transform: "translate(-50%, -130%)",
+        transform: "translate(-12%, -40%)",
       }
       if (isMobile){
         setStyle(styleMobile)

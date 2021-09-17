@@ -10,8 +10,6 @@ export default function Form(props) {
   const [company, setCompany] = useState('')
   const [email, setEmail] = useState('')
   const [subscribe, setSubscribe] = useState(false)
-
-  const [error, setError] = useState(false)
   const [errorMsg, setErrorMsg] = useState('')
 
   function confirm(){
@@ -20,22 +18,19 @@ export default function Form(props) {
 
   function validation(){
     if (!name || !company || !email) {
-      console.log('error!')
-      setError(true)
       setErrorMsg('Please complete form filling!')
       return true
     } else if (!email.includes("@")){
-      setError(true)
       setErrorMsg('Please input valid email!')
       return true
     } else {
-      setError(false)
+      setErrorMsg('');
       return false
     }
   }
   
   function reset(){
-    setError(false)
+    setErrorMsg('')
     setName('')
     setCompany('')
     setEmail('')
@@ -62,10 +57,10 @@ export default function Form(props) {
           <Input setValue={setEmail} value={email} placeholder="Email"/>
           <div className="checkbox">
             <Input type="checkbox"  setValue={setSubscribe} value={subscribe} placeholder="Email"/>
-            <label for="vehicle1">Would you like to receive emails from SIA innovations?</label><br></br>
+            <label>Would you like to receive emails from SIA innovations?</label><br></br>
           </div>
         </div>
-        <div className="error">{error && <p className="errorMeg">{errorMsg}</p>}</div>
+        <div className="error">{errorMsg && <p className="errorMeg">{errorMsg}</p>}</div>
         <div className="buttons">
           <Button confirm type="submit">Confirm</Button>
           <Button danger onClick={reset}>Clear</Button>
