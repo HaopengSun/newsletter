@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import Button from "../button/Button"
-import Form from "../form/Form"
-import Nav from "../nav/Nav"
-import Content from "../content/Content"
+import Button from "../button/Button";
+import Form from "../form/Form";
+import Nav from "../nav/Nav";
+import Content from "../content/Content";
+import useTimeout from "../../hooks/timeout";
 
 import "./Subscribe.scss"
 
@@ -11,12 +12,8 @@ export default function Subscribe() {
   const [width, setWindowWidth] = useState(
     window.innerWidth > 1023 ? window.innerWidth * 0.5 : window.innerWidth * 0.8
   );
-  const [style, setStyle] = useState({
-    display: 'none'
-  })
-  const [menuOpen, setMenuOpen] = useState(false)
 
-  const isMobile = window.innerWidth <= 500;
+  const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => { 
     updateDimensions();
@@ -25,56 +22,13 @@ export default function Subscribe() {
       window.removeEventListener("resize",updateDimensions);
     };
   }, [])
-  
-  useEffect(() => {
-    const timer = setTimeout(() => { handleChat() }, 3000)
-    return () => clearTimeout(timer)
-  }, [])
-  
+
   const updateDimensions = () => {
     const width = window.innerWidth > 1023 ? window.innerWidth * 0.5 : window.innerWidth * 0.8
     setWindowWidth(width)
   }
 
-  const handleChat = () => {
-    if (style.display === "none") {
-      const fixedStyle = {
-        width: width,
-        display: "flex",
-        flexDirection: "column",
-        border: "3px solid black",
-        borderRadius: "15px",
-        position: "fixed",
-        top: "40%",
-        background: "white",
-        animation: "slide-up 1s",
-        zIndex: "1",
-      }
-      const newStyle = {
-        ...fixedStyle,
-        height: "90%",
-        left: "46%",
-        transform: "translate(-50%, -50%)"
-      }
-      const styleMobile = {
-        ...fixedStyle,
-        height: "30%",
-        left: "10%",
-        transform: "translate(-50%, -130%)",
-      }
-      if (isMobile){
-        setStyle(styleMobile)
-      } else {
-        setStyle(newStyle)
-      }
-    } else {
-      const newStyle = {
-        display: "none",
-      }
-      setStyle(newStyle)
-    }
-  }
-
+  const { style, handleChat } = useTimeout(width);
 
   return (
     <div>
