@@ -10,6 +10,17 @@
   align-items: center;
 
   .left{
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+
+    img{
+      width: 45px;
+      height: 100%;
+      float: left;
+    }
+
     a {
       float: left;
       display: block;
@@ -21,7 +32,6 @@
     }
     
     a:hover {
-      background-color: #ddd;
       color: black;
     }
   
@@ -30,8 +40,7 @@
     }
 
     #home:hover{
-      background-color: #ddd;
-      color: black;
+      color: white;
     }
   }
 
