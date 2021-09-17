@@ -40,16 +40,22 @@
       cursor: pointer;
 
       @include mobile{
-        display: none;
+        height: 30px;
       }
   
       &.left {
         left: 100px;
+        @include mobile{
+          left: 10px;
+        }
       }
       
       &.right {
         transform: rotateY(180deg);
         right: 100px;
+        @include mobile{
+          right: 10px;
+        }
       }
     }
 

@@ -21,7 +21,6 @@ const useTimeout = (width) => {
   }
   
   const handleChat = () => {
-    console.log('show')
     if (style.display === "none") {
       const newStyle = {
         ...fixedStyle,
