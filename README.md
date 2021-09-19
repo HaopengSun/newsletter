@@ -14,13 +14,11 @@ Home page
 Popup form
 ![Popup form page](https://github.com/HaopengSun/newsletter/blob/master/screenshots/popup-form.png)
 
-Home page (mobile)
+Home page (mobile)<br />
 <img src="https://github.com/HaopengSun/newsletter/blob/master/screenshots/home-mobile.png" alt="Home page mobile" width="360"/>
+
+Menu page (mobile)<br />
 <img src="https://github.com/HaopengSun/newsletter/blob/master/screenshots/menu-mobile.png" alt="Home page mobile" width="360"/>
+
+Popup form page (mobile)<br />
 <img src="https://github.com/HaopengSun/newsletter/blob/master/screenshots/popup-form-mobile.png" alt="Home page mobile" width="360"/>
-
-Menu (mobile)
-![Menu page](https://github.com/HaopengSun/newsletter/blob/master/screenshots/menu-mobile.png)
-
-Popup form (mobile)
-![Popup form mobile page](https://github.com/HaopengSun/newsletter/blob/master/screenshots/popup-form-mobile.png)
