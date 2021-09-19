@@ -17,6 +17,18 @@
     .change{
       background-color: $item;
       color: $dark-background;
+      width: 80%;
+      margin: auto;
+
+      @include mobile{
+        width: 100%;
+      }
+    }
+
+    h1{
+      @include mobile{
+        font-size: 24px;
+      }
     }
 
   }
