@@ -18,10 +18,13 @@ export default function Form(props) {
 
   function validation(){
     if (!name || !company || !email) {
-      setErrorMsg('Please complete form filling!')
+      setErrorMsg('Please complete form filling.')
       return true
     } else if (!email.includes("@")){
-      setErrorMsg('Please input valid email!')
+      setErrorMsg('Please input valid email.')
+      return true
+    } else if (!subscribe){
+      setErrorMsg('Please agree to receive SIA emails.')
       return true
     } else {
       setErrorMsg('');
@@ -48,6 +51,7 @@ export default function Form(props) {
         if (!validation()){
           confirm();
           props.handleChat();
+          if (subscribe) props.setSub(true);
           reset();
         }
       }}>
@@ -57,13 +61,13 @@ export default function Form(props) {
           <Input setValue={setEmail} value={email} placeholder="Email"/>
           <div className="checkbox">
             <Input type="checkbox"  setValue={setSubscribe} value={subscribe} placeholder="Email"/>
-            <label>Would you like to receive emails from SIA innovations?</label><br></br>
+            <label>I agree to receive emails from SIA innovations.</label><br></br>
           </div>
         </div>
         <div className="error">{errorMsg && <p className="errorMeg">{errorMsg}</p>}</div>
         <div className="buttons">
-          <Button confirm type="submit">Confirm</Button>
-          <Button danger onClick={reset}>Clear</Button>
+          <Button confirm type="submit">Submit</Button>
+          <Button danger onClick={reset}>Reset</Button>
         </div>
       </form>
     </section>
