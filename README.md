@@ -6,6 +6,8 @@ Popup subscribe form will pop up 3 seconds after the web page loaded.
 
 Users can also click the subscribe bubble to fill out the form.
 
+The application uses React.js as front end and after user successfully submit the form, the info will show in the inspect.
+
 ## screen shots
 
 Home page
