@@ -6,7 +6,7 @@ const useTimeout = (width) => {
     display: 'none'
   })
   
-  const isMobile = window.innerWidth <= 500;
+  const isMobile = window.innerWidth <= 768;
   const fixedStyle = {
     width: width,
     display: "flex",

@@ -13,8 +13,6 @@ export default function Subscribe() {
     window.innerWidth > 1023 ? window.innerWidth * 0.5 : window.innerWidth * 0.8
   );
 
-  const [menuOpen, setMenuOpen] = useState(false)
-
   useEffect(() => { 
     updateDimensions();
     window.addEventListener("resize", updateDimensions);
@@ -32,7 +30,7 @@ export default function Subscribe() {
 
   return (
     <div>
-      <Nav menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
+      <Nav />
       <Content />
       <span className="newsletter">
         <p>Subscribe Newsletter and get latest news!</p>
