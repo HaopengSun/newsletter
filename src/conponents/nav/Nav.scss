@@ -52,8 +52,10 @@
 
 @include mobile{
   .topnav{
-    float: right;
-
+    img{
+      width: 45px;
+      height: 100%;
+    }
     .left{
       width: 60%;
       height: 100%;

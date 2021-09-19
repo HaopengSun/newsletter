@@ -14,6 +14,7 @@ export default function Nav(props) {
 
   return (
   <div className={"topnav " + (props.menuOpen && "active")}>
+    {isMobile && <img src={icon} alt="icon" />}  
     <div className="left" style={style}>
       <img src={icon} alt="icon" />
       <a href="#home" id="home" onClick={closeMenu}>SIA Innovations</a>
