@@ -15,7 +15,7 @@ Popup form
 ![Popup form page](https://github.com/HaopengSun/newsletter/blob/master/screenshots/popup-form.png)
 
 Home page (mobile)
-![Home page](https://github.com/HaopengSun/newsletter/blob/master/screenshots/home-mobile.png)
+<img src="https://github.com/HaopengSun/newsletter/blob/master/screenshots/home-mobile.png" alt="Home page mobile" width="360"/>
 
 Menu (mobile)
 ![Menu page](https://github.com/HaopengSun/newsletter/blob/master/screenshots/menu-mobile.png)
